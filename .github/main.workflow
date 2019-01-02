@@ -1,4 +1,4 @@
-workflow "Sync Glitch Workflow" {
+workflow "Sync Glitch on push" {
   on = "push"
   resolves = ["Sync changes"]
 }
