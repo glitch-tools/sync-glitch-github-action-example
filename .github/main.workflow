@@ -1,9 +1,9 @@
-workflow "Sync changes in your GitHub repository to glitch.com" {
+workflow "Sync changes" {
   on = "push"
-  resolves = ["Deploy"]
+  resolves = ["Sync changes"]
 }
 
-action "Deploy" {
+action "Sync changes" {
   uses = "glitch-tools/sync-glitch-github-action@master"
   secrets = ["GLITCH_PROJECT_ID", "GLITCH_TOKEN"]
 }
